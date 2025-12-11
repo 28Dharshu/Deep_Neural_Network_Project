@@ -18,21 +18,32 @@ This solution helps automate waste segregation, making it efficient and environm
 
 📁 File Structure
 DNN-Project/
-│── model1.json                # Saved model architecture
-│── model1.weights.h5          # Model weights
-│── predict_single_image.py    # Predicts one image
-│── live_camera_detection.py   # Real-time waste detection using webcam
-│── evaluate_model_on_dataset.py  # Dataset evaluation + accuracy graph
-│── DATASET/                   # Training & testing dataset
-│     ├── TRAIN/
-│     │     ├── O/
-│     │     └── R/
-│     └── TEST/
-│           ├── O/
-│           └── R/
-│── accuracy_plot.png          # Generated accuracy graph
-│── prediction_results.csv     # Per-image prediction report
-│── README.md
+
+
+1. model1.json                  # Saved model architecture
+
+2. model1.weights.h5            # Model weights
+
+3. predict_single_image.py      # Predicts one image
+
+4. live_camera_detection.py     # Real-time waste detection using webcam
+
+5. evaluate_model_on_dataset.py   # Dataset evaluation + accuracy graph
+
+6. DATASET/                     # Training & testing dataset
+     i)  TRAIN/ 
+           -> O/
+           -> R/
+     ii) TEST/
+           -> O/
+           -> R/
+7. accuracy_plot.png          # Generated accuracy graph
+
+   
+8. prediction_results.csv     # Per-image prediction report
+
+    
+10. README.md
 
 🧠 Model Description
 Deep Neural Network (DNN)
@@ -154,4 +165,5 @@ Deploy on Raspberry Pi for real-time smart bin solutions
 👨‍💻 Author
 
 Dharshini M
+
 Deep Neural Network (DNN) Waste Classification Project
