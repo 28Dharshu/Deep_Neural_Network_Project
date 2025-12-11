@@ -1,5 +1,7 @@
 🧠 AI-Powered Waste Classification Using Deep Neural Networks
+
 🔍 Classifying Recyclable (R) and Organic/Non-Recyclable (O) Waste Using Machine Learning
+
 📌 Project Overview
 
 This project uses a Deep Neural Network (DNN) built with TensorFlow/Keras to automatically classify waste images into two categories:
@@ -46,6 +48,7 @@ DNN-Project/
 10. README.md
 
 🧠 Model Description
+
 Deep Neural Network (DNN)
 
 You used a feed-forward neural network with:
