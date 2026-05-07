@@ -1,70 +1,89 @@
-# AI-Powered Waste Classification Using Deep Neural Networks
-
-## Classifying Recyclable and Organic Waste Using Machine Learning
+# AI-Powered Waste Classification System  
+Using Deep Neural Networks, TensorFlow, Keras and OpenCV
 
 ---
 
-## Project Overview
+## 1. Project Overview  
 
-This project presents an AI-based waste classification system developed using a Deep Neural Network (DNN) with TensorFlow and Keras. The model automatically classifies waste images into two categories:
+This AI-based Waste Classification System uses a Deep Neural Network (DNN) to classify waste images into:
 
-- R — Recyclable Waste
-- O — Organic / Non-Recyclable Waste
+- Recyclable Waste (R)
+- Organic / Non-Recyclable Waste (O)
 
-The system is designed to support automated waste segregation for smart environmental management applications.
-
-The project includes:
+The project performs:
 - Single image prediction
-- Real-time waste detection using webcam
-- Dataset evaluation and accuracy analysis
+- Real-time webcam detection
+- Dataset evaluation
 - Accuracy graph generation
-- Prediction report generation in CSV format
+- CSV prediction report generation
+
+The system helps automate waste segregation for smart environmental and recycling applications.
 
 ---
 
-## Dataset Structure
+## 2. Features  
 
-DNN-Project/
-│
-├── model1.json
-├── model1.weights.h5
-├── predict_single_image.py
-├── live_camera_detection.py
-├── evaluate_model_on_dataset.py
-├── accuracy_plot.png
-├── prediction_results.csv
-├── README.md
-│
-└── DATASET/
-    ├── TRAIN/
-    │   ├── O/
-    │   └── R/
-    │
-    └── TEST/
-        ├── O/
-        └── R/
+- Automated waste image classification  
+- Real-time webcam-based detection  
+- Dataset accuracy evaluation  
+- Accuracy graph generation  
+- CSV prediction report generation  
+- Simple TensorFlow/Keras implementation  
+- Lightweight and easy-to-run project  
 
 ---
 
-## Model Description
+## 3. Technologies Used  
 
-The project uses a Feed-Forward Deep Neural Network for image classification.
+- Python  
+- TensorFlow  
+- Keras  
+- OpenCV  
+- NumPy  
+- Pandas  
+- Matplotlib  
 
-### Architecture
-- Input Layer: 128 × 128 × 3 image
+---
+
+## 4. Model Architecture  
+
+The project uses a Feed-Forward Deep Neural Network with:
+
+- Input Layer (128 × 128 × 3 image)
 - Hidden Layers with ReLU activation
-- Output Layer with Softmax/Sigmoid activation
-- Framework: TensorFlow / Keras
-
-### Training Details
-- Trained using labeled waste images
-- Classes:
-  - Organic / Non-Recyclable (O)
-  - Recyclable (R)
+- Output Layer with Sigmoid/Softmax activation
+- Binary classification:
+  - O → Organic / Non-Recyclable
+  - R → Recyclable
 
 ---
 
-## Model Performance
+## 5. Dataset Structure 
+
+
+
+─ model1.json
+─ model1.weights.h5
+─ predict_single_image.py
+─ live_camera_detection.py
+─ evaluate_model_on_dataset.py
+─ accuracy_plot.png
+─ prediction_results.csv
+─ README.md
+
+─ DATASET/
+
+    ─ TRAIN/
+      ─ O/
+      ─ R/
+    
+    ─ TEST/
+      ─ O/
+      ─ R/
+
+---
+
+## 6. Model Accuracy  
 
 | Metric | Accuracy |
 |--------|-----------|
@@ -74,72 +93,50 @@ The project uses a Feed-Forward Deep Neural Network for image classification.
 
 ---
 
-## Installation
+## 7. Output Types  
 
-Install the required Python libraries before running the project.
+### 7.1 Single Image Prediction  
 
-pip install tensorflow
-pip install numpy
-pip install opencv-python
-pip install matplotlib
-pip install pandas
-
----
-
-## Running the Project
-
-### 1. Single Image Prediction
-
-Run the following script:
-
-python predict_single_image.py
-
-Set the image path inside the script:
-
-img_path = r"C:\Users\DELL\Desktop\DNN1\DATASET\TEST\O\O_12568.jpg"
-
-The model predicts whether the image belongs to:
+The system predicts whether the selected image belongs to:
 - Recyclable Waste (R)
 - Organic / Non-Recyclable Waste (O)
 
 ---
 
-### 2. Real-Time Waste Detection Using Webcam
+### 7.2 Real-Time Webcam Detection  
 
-Run:
-
-python live_camera_detection.py
-
-Features:
-- Opens webcam for live detection
-- Predicts waste category in real time
-- Displays prediction label and confidence score
-- Press Q to exit the webcam window
+The webcam system:
+- Captures live video
+- Detects waste category
+- Displays prediction label
+- Shows confidence score in real time
 
 ---
 
-### 3. Dataset Evaluation and Accuracy Graph
+### 7.3 Dataset Evaluation  
 
-Run:
-
-python evaluate_model_on_dataset.py
-
-Functions Performed:
-- Reads all images from TEST dataset
+The evaluation system:
+- Reads all TEST images
 - Predicts each image
-- Calculates:
-  - Overall accuracy
-  - Class-wise accuracy
-- Generates:
-  - Accuracy graph
-  - CSV prediction report
+- Calculates overall accuracy
+- Calculates class-wise accuracy
+- Generates graph and CSV report
 
-Generated Files:
-- accuracy_plot.png
-- prediction_results.csv
+---
 
-Sample Output:
+## 8. Output Results  
 
+### 8.1 Accuracy Graph  
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/28Dharshu/Deep_Neural_Network_Project/main/accuracy_plot.png" width="500">
+</p>
+
+---
+
+### 8.2 Evaluation Output  
+
+```text
 --- Evaluation Summary ---
 
 Total images: 2513
@@ -151,60 +148,3 @@ Class O:
 
 Class R:
 986 / 1112 correct -> 88.67%
-
----
-
-## Features
-
-- Automated waste image classification
-- Real-time webcam-based prediction
-- Dataset evaluation with performance metrics
-- Accuracy visualization using graphs
-- CSV report generation
-- Simple and modular implementation
-- Easy to extend for future improvements
-
----
-
-## Applications
-
-- Smart waste management systems
-- Recycling centers
-- Environmental monitoring systems
-- Smart city applications
-- AI-based educational projects
-- IoT-enabled waste segregation systems
-
----
-
-## Future Enhancements
-
-- Deploy using TensorFlow Lite
-- Add additional waste categories:
-  - Plastic
-  - Metal
-  - Glass
-  - Paper
-- Improve performance using Convolutional Neural Networks (CNN)
-- Raspberry Pi deployment for smart bin applications
-- Cloud-based monitoring and analytics
-
----
-
-## Technologies Used
-
-- Python
-- TensorFlow
-- Keras
-- OpenCV
-- NumPy
-- Matplotlib
-- Pandas
-
----
-
-## Author
-
-Dharshini M
-
-Deep Neural Network Waste Classification Project
